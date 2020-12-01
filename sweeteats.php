@@ -14,7 +14,7 @@ $title = "Sweet Eats Website";
 $highlights = "responsive design, admin area, automated cupcake promotion";
 $details = "I designed this fictional bakery and caf&eacute; website to demonstrate my ability to create a modern, dynamic, and responsive website with administrative functionality.";
 $visitLink = "https://www.sweeteats.nibtrek.com/";
-$codeLink = "";
+$codeLink = "https://github.com/whatdavedoes/sweeteats";
 
 echo addEntryDetails($featuredImage, $title, $highlights, $details, $visitLink, $codeLink);
 
