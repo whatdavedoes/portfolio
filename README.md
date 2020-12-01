@@ -1,16 +1,18 @@
 # portfolio
-This is Dave's porfolio. It has a minimalistic design to put the emphasis on the portfolio entries. 
+This is Dave's portfolio. It has a minimalistic design to put the emphasis on the portfolio entries.
 
-# It can serve as porfolio template.
+The live website can be seen [here](https://www.whatdavedoes.com).
+
+# It can serve as portfolio template.
 *How to adapt:*
 * Update website icon, open graph data(for social media), and title tag in header.php
 * Update data.php
 * Delete/adapt content on about.php below inc/header.php and above inc/contactbox.php
 * Replace Dave's entry detail pages with yours(remove ironpdf.php, nibtrek.php, etc...). You may wish to keep one for reference.
 
-## How to add porfolio entries
+## How to add portfolio entries
 ### 1. Start by outlining your portfolio entries/pieces in inc/data.php
-  * Each porfolio entry/piece is an array nested in the $entries array
+  * Each portfolio entry/piece is an array nested in the $entries array
   * Each entry array contains:
     * page name string (corresponds to entry details file name without extension)
     * image file name string
