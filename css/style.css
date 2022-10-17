@@ -1,0 +1,342 @@
+/*
+FONTS:
+font-family: 'Adamina', serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+body {
+    background-color: #F1F1EE;
+}
+
+p, li {
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list {
+    display: inline-block;
+}
+
+.navPadding {
+    padding-top: 10px;
+}
+
+.big-txt {
+     font-family: 'Adamina', serif;
+}
+
+.jumbotron {
+    background-color: #FFF;
+}
+
+.nav-name {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 32px;
+    margin-right: 20px;
+    position: relative;
+    top: 8px;
+    color: #4B4B4B;
+}
+
+.nav-name:hover {
+    text-decoration: none;
+    color: #4B4B4B;
+}
+
+.sm-txt {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+a {
+    color: #4B4B4B;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: #E5A91A;
+}
+
+.active a {
+    border-bottom: solid 6px #FFC681;
+    color: #E5A91A;
+}
+
+.entry-link {
+   border-radius: 5px;
+   filter: grayscale(100%);
+}
+
+.entry-link:hover {
+    /*background-image: url(../img/fractal_back-min.jpg);*/
+    background-color: #FFF;
+    cursor: pointer;
+    filter: grayscale(0%);
+    box-shadow: 5px 10px 8px #ABABAB;
+}
+
+.entry-ctn {
+    display: block;
+    margin: 0 auto;
+    max-width: 75%;
+}
+
+.tech {
+    display: block;
+    text-align: center;
+    position: relative;
+    top: -20px;
+    background-color: #F1F1EE;
+    margin: 0;
+    padding: 8px;
+}
+
+.tech-img {
+    max-height: 35px;
+    display: inline-block;
+    padding-right: 2px;
+}
+
+.footer-txt {
+    font-family: 'Adamina', serif;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.noVis {
+    opacity: 0;
+}
+
+.entryFeatured {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.entryFeatured:hover {
+    cursor: pointer;
+}
+
+.socialLnk:hover {
+    text-decoration: none;
+}
+
+.featuredHeading {
+    font-family: 'Adamina', serif;
+    color: #4B4B4B;
+    font-size: 36px;
+}
+
+.topCtn {
+    /*background-color: #FFECD5;*/
+    padding: 8px;
+    border-radius: 5px;
+    border: solid 2px #4B4B4B;
+}
+
+.highlight {
+    background-color: #FFE3C0;
+    padding: 0 5px 0;
+}
+
+.daveBio {
+    max-width: 140px;
+    border-radius: 50%;
+}
+
+.cntrBlock {
+    display: block;
+    margin: 0 auto;
+}
+
+.cntrTxt {
+    text-align: center;
+}
+
+.txtWidth {
+    max-width: 520px;
+}
+
+.likesWidth {
+    max-width: 120px;
+}
+
+.daveYoung {
+    max-width: 220px;
+}
+
+.cardImg {
+    max-width: 100%;
+    max-height: 190px;
+    border-radius: 5px;
+}
+
+.bandLnk {
+    text-decoration: underline;
+}
+
+.oLnk {
+    color: #BF8D15;
+}
+
+.oLnk:hover {
+    color: #E5A91A;
+}
+
+.featuredProcess {
+    font-family: 'Adamina', serif;
+    color: #4B4B4B;
+    opacity: .7;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.txtProcessWidth {
+    max-width: 680px;
+}
+
+.processImg {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+}
+
+.quoteBox {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: #FFC681;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.reviewCard {
+    max-width: 850px;
+    display: block;
+    margin: 0 auto;
+    
+}
+
+.socialCtn {
+    text-align: right;
+}
+
+.socialIco {
+    max-width: 36px;
+    display: inline-block;
+    position: relative;
+    top: 12px;
+    filter: grayscale(100%);
+    opacity: 40%;
+}
+
+.socialIco:hover {
+    filter: grayscale(0%);
+    opacity: 100%;
+    cursor: pointer;
+}
+
+.contactIco {
+    opacity: 50%;
+}
+
+.phoneIco {
+    max-width: 36px;
+    padding-right: 5px;
+}
+
+.emailIco {
+    max-width: 36px;
+    padding-right: 5px;
+}
+
+.mailCtn {
+    margin-top: 20px;
+}
+
+.contactWpr {
+    display: block;
+    margin: 0 auto;
+    max-width: 280px;
+    margin-top: 40px;
+    padding: 12px;
+    background-color: #FFF;
+    border-radius: 5px;
+}
+
+.boxLnk {
+    text-decoration: underline;
+}
+
+.boxLnk:hover {
+    text-decoration: underline;
+}
+
+.nav-box {
+    text-align: center;
+}
+
+.bioLnk {
+    width: 140px;
+}
+
+.reviewPara {
+    padding: 0 60px 0;
+}
+
+.btn-orange {
+    border: solid 2px #E6A91A;
+    color: #E6A91A;
+    font-weight: bold;
+    font-size: 16px;
+    max-width: 340px;;
+}
+
+.btn-orange:hover {
+    background-color: #E6A91A;
+    color: #FFF;
+}
+
+.webcamIco {
+    max-width: 40px;
+    padding-right: 2px;
+    margin-left: 3px;
+    position: relative;
+    top: 0px;
+    left: -5px;
+}
+
+.webcamIcoBtn {
+    max-width: 40px;
+    padding-right: 2px;
+    margin-left: 3px;
+    position: relative;
+    top: 8px;
+    left: -5px;
+}
+
+.meetCtn {
+    display: block;
+    padding-bottom: 14px;;
+}
+
+@media screen and (max-width: 900px) {
+  .reviewPara {
+    padding: 20px 0 0;
+    margin: 0;
+  }
+}
