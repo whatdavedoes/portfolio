@@ -13,7 +13,7 @@ $featuredImage = "img/sweet_eats-min.jpg";
 $title = "Sweet Eats Bakery & Café: A Responsive Website with Admin Functionality";
 $highlights = "responsive design, admin area, automated cupcake promotion";
 $details = "This project showcases a fictional bakery and cafe website designed to demonstrate my skills in creating modern, user-friendly, and responsive websites with robust administrative features.";
-$visitLink = "https://www.sweeteats.whatdavedoes.com/";
+$visitLink = "https://sweeteats.whatdavedoes.com/";
 $codeLink = "https://github.com/whatdavedoes/sweeteats";
 
 echo addEntryDetails($featuredImage, $title, $highlights, $details, $visitLink, $codeLink);

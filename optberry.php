@@ -15,7 +15,7 @@ $featuredImage = "img/optberry_featured-min.jpg";
 $title = "Optberry Product Customization Application";
 $highlights = "SQLite, PDO Object, PHP populating JavaScript Objects, click tracking";
 $details = "This app lets users design their dream product, from guitars(Revomere as showcased) to sneakers. Update the database, and the app adapts seamlessly.  I built it to showcase my skills in web development, database integration, and graphic design.";
-$visitLink = "https://www.optberry.whatdavedoes.com/";
+$visitLink = "https://optberry.whatdavedoes.com/";
 $codeLink = "https://github.com/whatdavedoes/optberry";
 
 echo addEntryDetails($featuredImage, $title, $highlights, $details, $visitLink, $codeLink);

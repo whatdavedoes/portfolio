@@ -13,7 +13,7 @@ $featuredImage = "img/ironpdf_featured-min.jpg";
 $title = "The Iron PDF Generator";
 $highlights = "jsPDF, \$_POST, pdf configuration form";
 $details = "This is a free tool designed for personal trainers to package their client's stats and goals into a PDF file. Notable developments include dynamically adding/removing form elements, requiring form fields, filtering input, and sending submitted data to a new PDF configuration form.";
-$visitLink = "https://www.ironpdf.whatdavedoes.com/";
+$visitLink = "https://ironpdf.whatdavedoes.com/";
 $codeLink = "https://github.com/whatdavedoes/ironpdf";
 
 echo addEntryDetails($featuredImage, $title, $highlights, $details, $visitLink, $codeLink);
