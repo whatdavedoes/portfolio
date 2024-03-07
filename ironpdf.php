@@ -10,9 +10,9 @@ include 'inc/header.php';
 
 // Featured image exported as JPG, 800 x 534
 $featuredImage = "img/ironpdf_featured-min.jpg";
-$title = "The Iron PDF Generator";
+$title = "Streamlining Client Management for Personal Trainers";
 $highlights = "jsPDF, \$_POST, pdf configuration form";
-$details = "This is a free tool designed for personal trainers to package their client's stats and goals into a PDF file. Notable developments include dynamically adding/removing form elements, requiring form fields, filtering input, and sending submitted data to a new PDF configuration form.";
+$details = "I built a free tool that streamlines client management for personal trainers. It allows them to effortlessly package client statistics and goals into professional PDF reports. Key features include dynamic form creation (adding/removing elements as needed), mandatory fields for crucial information, data validation to ensure accuracy, and an intuitive flow that transitions the information into a customizable PDF document.";
 $visitLink = "https://ironpdf.whatdavedoes.com/";
 $codeLink = "https://github.com/whatdavedoes/ironpdf";
 
@@ -22,9 +22,9 @@ echo addBigTxt("The Process:");
 
 //Layout and design
 $heading = "Layout &amp; Design";
-$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">Affinity Designer</span><span class=\"mr-1 badge badge-pill badge-secondary\">Vector</span><span class=\"mr-1 badge badge-pill badge-secondary\">Bootstrap</span><br>I started by doing some research on what type of calculations were common for personal trainer's to use with their client's data. I noticed most formulas/online tools use standard(ft, in, lbs) or metric(cm, kg) units so I added a select element to the form so the user could choose their unit preference. I also added an optional text field for a title and two optional text areas for comments so the trainer could personalize the pdf.
+$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">Affinity Designer</span><span class=\"mr-1 badge badge-pill badge-secondary\">Vector</span><span class=\"mr-1 badge badge-pill badge-secondary\">Bootstrap</span><br>Research identified common calculations used by trainers (standard/metric units). The tool offers a user-friendly selection for unit preference. Recognizing the value of personalization, optional fields allow trainers to add titles and comments, tailoring reports for each client.
 <br><br>
-I speed up the design process by using a stock vector with proper licsensing for the logo. I adapted it to my needs and decided on a bright green color that you might find in a gym with a dark gray. I was going for the handwritten chalkboard feel you might find in an old school gym so I opted for a handwriting font, dark chalkboard type gray, and light gray for the placeholders that could resemble chalk. I also used the green from the logo in the forms for consistency.";
+A licensed stock vector logo was adapted for a professional look. The color scheme (vibrant gym green with dark gray) and font choices (handwritten, chalkboard-inspired) create a classic gym aesthetic. The logo's green is used for forms, ensuring visual consistency.";
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [
@@ -51,8 +51,8 @@ echo addContentArea($heading, $description, $imgArray);
 
 
 //---------------- 
-$heading = "Code Snippets";
-$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">PHP</span><br>Below is some code that runs when there are no errors on form submission. Each include statement has a Bootstrap card component representing a health metric(BMI, metabolic rates) or section of the PDF(title, comments). Each card component is placed in it's own file to separate concerns. The code for the ideal body weight card is shown below. It is populated by the populateIbw() function which calls on the calcIbw() function. The calcIbw() function takes arguments to return an ideal weight range. Global variables(gender, units) populated by the user's form input are used in this function.";
+$heading = "Modular PDF Generation with Bootstrap Cards";
+$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">PHP</span><br>This code snippet demonstrates error-free form submission processing.  The logic leverages Bootstrap card components, each housed in separate files for improved maintainability. These cards represent health metrics (BMI, metabolic rates) and other report sections (title, comments).<br><br>The provided code showcases the ideal body weight card generation. It utilizes the populateIbw() function, which in turn calls the calcIbw() function. The latter calculates the ideal weight range based on user-provided information (gender and units) stored in global variables populated during form submission.";
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [
@@ -79,10 +79,8 @@ echo addContentArea($heading, $description, $imgArray);
 
 
 //Generating the PDF
-$heading = "Generating the PDF";
-$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">JavaScript</span><span class=\"mr-1 badge badge-pill badge-secondary\">jsPDF</span><span class=\"mr-1 badge badge-pill badge-secondary\">base64</span><br>I used the jsPDF library for generating the PDF in JavaScript. I set positioning variables to be passed as arguments to the methods of the doc(PDF) Object. I noticed new pages were not automatically added and content would get cut off, so I added a max page height variable that I would use in logic with the Y axis variable to check if a new page was needed.
-<br><br>
-Since I could not link to images within the PDF, I used an online conversion tool to convert images to base64.";
+$heading = "Dynamic PDF Creation with jsPDF";
+$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">JavaScript</span><span class=\"mr-1 badge badge-pill badge-secondary\">jsPDF</span><span class=\"mr-1 badge badge-pill badge-secondary\">base64</span><br>This section details the utilization of jsPDF for robust PDF generation in JavaScript. To ensure precise element placement within the document, positioning variables were meticulously crafted and passed as arguments to the doc (PDF object) methods.<br><br>A crucial challenge emerged: automatic page creation within the PDF. To prevent content from being truncated, a maxPageHeight variable was implemented. This variable, in conjunction with the Y-axis position, dictates when a new page should be initiated, ensuring seamless content flow across multiple pages.<br><br>Furthermore, as direct image embedding wasn't feasible, a resourceful approach was adopted. Images were converted to Base64 format using an online tool, enabling their successful incorporation into the generated PDF.";
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [
@@ -96,11 +94,7 @@ echo addContentArea($heading, $description, $imgArray);
 
 // Final Thoughts
 $heading = "Final Thoughts";
-$description = "In this project I learned about converting images to base64 to save on http requests, or when requests are not possible. I also gained confidence working with arrays and writing functions with Javascript and PHP. I gained an understanding of variable scope. The JavaScript variables I declared(let keyword) were global and could be used in functions, while PHP variables are in the local scope and I have to use the global keyword within functions for them to be available.
-<br><br>
-There was poor separation of functions that populate HTML, functions that make calculations, and the calling of functions. I need a better understanding of best practices for organizing code and consistency in structuring my code. There is an opportunity for refactoring here.
-<br><br>
-I think a good addition after refactoring would be adding a 2nd pdf template for creating workouts. It could include a muscle diagram with primary/secondary muscles worked, workout circuits/groups that could be repeated, and a Javascript auto-complete feature for exercise name titles.";
+$description = "This project boosted my skills in Base64 encoding (reducing HTTP requests) and working with arrays, functions, and variable scope (JavaScript's let vs. PHP's global). However, function separation for populating HTML, calculations, and calls needs improvement. Refactoring for better organization and consistency is key.<br><br>I think a good addition after refactoring would be adding a 2nd pdf template for creating workouts. It could include a muscle diagram with primary/secondary muscles worked, workout circuits/groups that could be repeated, and a Javascript auto-complete feature for exercise name titles.";
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [
