@@ -9,18 +9,18 @@ include 'inc/header.php'; ?>
 
 
 <img class="daveBio mt-4 cntrBlock" src="img/dave_biopic-min.jpg">
-        <h1 class="lead featuredHeading txtWidth cntrTxt cntrBlock mt-2">Hi, I'm Dave. I am a web designer/developer and audio engineer open to work.</h1>
+        <h1 class="lead featuredHeading txtWidth cntrTxt cntrBlock mt-2">Hi, I'm Dave. I am a web designer/developer open to work.</h1>
 
 
 <div class="row border-bottom">
 
     <div class="col-md-12">
 
-        <p class="txtWidth cntrBlock mt-4">My knowledge base is in <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, <span class="highlight">JavaScript</span>, <span class="highlight">React</span>, and <span class="highlight">graphic design</span>. While front-end focused, I've covered PHP, SQL, Node, and Express as well. I'm looking to be apart of a solid team and commited to a life of continous learning.</span></p> 
+        <p class="txtWidth cntrBlock mt-4">I bring a diverse skill set to the table, including <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, <span class="highlight">JavaScript</span>, <span class="highlight">PHP</span>, and <span class="highlight">graphic design</span>.  I'm currently fueling my passion for development by building OptBox, a personal project that allows me to experiment and solidify my skills.  I'm eager to join a collaborative team where I can continuously learn and grow alongside talented individuals.</span></p> 
 
         <img class="cntrBlock likesWidth mt-2 mb-2" src="img/dave_likes-min.png">
 
-        <p class="txtWidth cntrBlock pb-4">I also enjoy producing EDM music with Ableton, exercising, and drinking good coffee.</p>
+        <p class="txtWidth cntrBlock pb-4">I also enjoy playing guitar, exercising, and drinking good coffee.</p>
 
     </div>
 
@@ -52,17 +52,12 @@ include 'inc/header.php'; ?>
     <div class="container">
         <div class="row mt-4 mb-4">
             <div class="col-md-6">
-                <h2 class="lead featuredHeading cntrTxt">What I'm looking For</h2>
-                <ul style="list-style-type: none" class="cntrTxt">
-                    <li>Full Time/Part Time Work</li>
-                    <li>Benefits/Security</li>
-                    <li>Work/Life Balance</li>
-                    <li>Mentorship</li>
-                </ul>
+                <h2 class="lead featuredHeading cntrTxt">Thriving Environment</h2>
+                <p class="cntrTxt">I'm seeking a full-time/part-time opportunity where I can contribute to a collaborative team and continuously learn from experienced mentors. A strong emphasis on work-life balance and a comprehensive benefits package are important to me.</p>
             </div>
             <div class="col-md-6">
-                <h1 class="lead featuredHeading cntrTxt">My Learning Resources</h1>
-                <p class="cntrTxt">I started my learning journey on <span class="highlight">Lynda.com</span> before it became <span class="highlight">LinkedIn Learning</span>. I have also used <span class="highlight">Treehouse</span>, <span class="highlight">Codecademy</span>, <span class="highlight">Udemy</span>, Google searching, and documentation.</p>
+                <h1 class="lead featuredHeading cntrTxt">Lifelong Learner</h1>
+                <p class="cntrTxt">I'm a firm believer in continuous learning and have utilized a diverse range of resources, including online platforms, documentation, and self-directed projects, to hone my skills.  This approach has allowed me to develop a strong foundation in web development and programming.</p>
             </div>
         </div>
     </div>
@@ -72,13 +67,13 @@ include 'inc/header.php'; ?>
 
 
 <img class="daveBio cntrBlock" src="img/dave_young-min.jpg">
-    <h2 class="lead featuredHeading txtWidth cntrTxt cntrBlock mt-0 mb-2 pb-2 border-bottom">From a young age, I was fascinated with computers...</h2>
+    <h2 class="lead featuredHeading txtWidth cntrTxt cntrBlock mt-1 mb-2 pb-2 border-bottom">Clicks and Dreams</h2>
     
 <div class="row mt-1 mb-2 pt-1 border-bottom">
     
     <div class="col pb-4">
         
-        <p class="txtWidth cntrBlock mt-2 cntrTxt">At first, I was armed with Adobe Illustrator CS3 and website building software. I created websites/logos for friends and family. After graduating high school, I got my associates in Music Recording Technology, then joined a band playing lead guitar. Since then, I've been working odd jobs while studying my passions of web development, programming, and audio engineering. I enjoy being creative when it comes to design and problem solving. I value simplicity, automation, autonomy, and contributing to the well being of people. I believe that technology used with good intention is the key to progress.</p>
+        <p class="txtWidth cntrBlock mt-2 cntrTxt">My fascination with technology began at a young age, leading me to explore graphic design and website creation tools. I honed my creative eye by crafting websites and logos for friends and family.  While music played a significant role in my life, earning an Associate's Degree in Music Recording Technology and performing as a lead guitarist, my true passion lies in web development and programming.<br><br>Since then, I've continued to learn and grow by taking on various projects while actively studying these fields.  I find immense satisfaction in using my problem-solving skills to create elegant and automated solutions.  My core values include simplicity, efficiency, and the power of technology to improve people's lives.  I believe that using technology for good is the key to progress,  and I'm eager to contribute my skills to a team that shares this vision.</p>
         
     </div>
     

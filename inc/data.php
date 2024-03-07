@@ -2,7 +2,7 @@
 
 $name = "Dave Pierce";
 
-$myTitle = "Web Designer &amp; Audio Engineer";
+$myTitle = "Web Designer";
 
 $phone = "(585) 622-6492";
 
@@ -14,7 +14,7 @@ $entries = [
     ['elevate', 'elevate-min.png', ['affinity']],
     ['optberry', 'optberry-min.png', ['html', 'css', 'js', 'bootstrap', 'php', 'sql']],
     ['ironpdf', 'iron-min.png', ['html', 'css', 'js', 'bootstrap', 'php']],
-    ['nibtrek', 'nibtrek-min.png', ['html', 'css', 'js', 'bootstrap', 'php']],
+    // ['nibtrek', 'nibtrek-min.png', ['html', 'css', 'js', 'bootstrap', 'php']],
     ['wahzee', 'wahzee-logo-min.png', ['ableton', 'affinity']]
 ];
 

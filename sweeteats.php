@@ -10,10 +10,10 @@ include 'inc/header.php';
 
 // Featured image exported as JPG, 800 x 534
 $featuredImage = "img/sweet_eats-min.jpg";
-$title = "Sweet Eats Website";
+$title = "Sweet Eats Bakery & Café: A Responsive Website with Admin Functionality";
 $highlights = "responsive design, admin area, automated cupcake promotion";
-$details = "I designed this fictional bakery and caf&eacute; website to demonstrate my ability to create a modern, dynamic, and responsive website with administrative functionality.";
-$visitLink = "https://www.sweeteats.nibtrek.com/";
+$details = "This project showcases a fictional bakery and cafe website designed to demonstrate my skills in creating modern, user-friendly, and responsive websites with robust administrative features.";
+$visitLink = "https://www.sweeteats.whatdavedoes.com/";
 $codeLink = "https://github.com/whatdavedoes/sweeteats";
 
 echo addEntryDetails($featuredImage, $title, $highlights, $details, $visitLink, $codeLink);
@@ -21,10 +21,10 @@ echo addEntryDetails($featuredImage, $title, $highlights, $details, $visitLink, 
 echo addBigTxt("The Process:");
 
 // Wireframes and Design
-$heading = "Wireframes &amp; Design";
-$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">wireframes</span><span class=\"mr-1 badge badge-pill badge-secondary\">responsive design</span><span class=\"mr-1 badge badge-pill badge-secondary\">logo deesign principles</span><br>Aside from the admin area/features that will be discussed, I made this three page website to resemble a simple \"set it and forget it\" type of website. It is responsive, mobile friendly, and effective in providing information to a user that may have arrived from an online search.
+$heading = "Design Decisions";
+$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">wireframes</span><span class=\"mr-1 badge badge-pill badge-secondary\">responsive design</span><span class=\"mr-1 badge badge-pill badge-secondary\">logo deesign principles</span><br>This website prioritizes a user-friendly and low-maintenance experience.  With three key pages, it provides essential information for potential customers arriving from online searches. The responsive design ensures optimal viewing across all devices.
 <br><br>
-For the logo mark(cupcake) I used a stock vector(with licensing) and changed the color. I made the font very colorful like the colors you may associate with sweets/frosting."; 
+For the logo, I leveraged a licensed stock vector cupcake, customizing the color palette to match the vibrant and playful theme. The typeface selection complements the visual identity, echoing the sweetness of the bakery's offerings."; 
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [
@@ -34,11 +34,11 @@ $imgArray = [
 echo addContentArea($heading, $description, $imgArray);
 
 // Responsive Design
-$heading = "Responsive Design";
-$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">Bootstrap</span><br>For a majority of the responsive features, I included a compiled and minified version of Bootstrap. I then used Bootstrap's classes to define when columns next to each other break to their own row. Bootstrap's navigation component also proved to be very useful.
+$heading = "Responsive Design with Bootstrap";
+$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">Bootstrap</span><br>Leveraging Bootstrap's framework, I ensured the website seamlessly adapts to various screen sizes. This guarantees a positive user experience on desktops, tablets, and mobile devices.
 <br><br>
 <span class=\"mr-1 badge badge-pill badge-secondary\">@media query</span><br>
-With smaller screen widths, the \"Free Wifi\" icon would invade the space of the logo while the \"Free Cup O' Joe\" icon overlapped the testimonial heading. Both icons made the mobile version of the layout very cluttered. My solution to this was removing the icons on smaller screen sizes by writing an @media query to take them out of the document object model. I did this by setting the CSS display property of the icon classes in the @media query to none. I then replaced both with a new image file containing both icons. I wrote a second @media query to accomplish this."; 
+To optimize the mobile layout, I implemented media queries to address layout conflicts.  For example, on smaller screens, \"Free Wifi\" and \"Free Cup O' Joe\" icons were dynamically hidden to prevent overlapping with other elements.  A single, combined icon image was then displayed for these features, improving visual clarity."; 
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [
@@ -49,11 +49,11 @@ $imgArray = [
 echo addContentArea($heading, $description, $imgArray);
 
 // CSS3 animation
-$heading = "CSS3 Animation";
+$heading = "Engaging CSS3 Animations";
 $description = "<span class=\"mr-1 badge badge-pill badge-secondary\">steps()</span><span class=\"mr-1 badge badge-pill badge-secondary\">sprite sheet</span><span class=\"mr-1 badge badge-pill badge-secondary\">@keyframes</span><br>
-If the cupcake promotion is active and set to the current day of the week, it triggers a few animations. I made the cupcake colors appear to move from left to right by using a PNG sprite sheet with the steps() function. I positioned the animation cupcake over the logo mark cupcake so I could fade out the animation smoothly. I also added a dismissable alert box that fades between the logo colors. I used the background color CSS property with the logo color hex values inside of an @keyframes CSS Rule. Lastly, I made three more @keyframes Rules of rotate, fade, and drop to be used together for the sprinkles.
+The website incorporates eye-catching CSS3 animations to highlight the cupcake promotion when active.  These animations utilize sprite sheets and keyframes to create a seamless color-shifting effect and add a playful touch to the user experience.
 <br><br>
-I used four sprinkle PNG images for each color and had nine sprinkle containers each containing a sprinkle image. An improvement to this would be adding one SVG image to save on HTTP requests. Next, add a PHP function that would randomize the number of sprinkles, color, speed of rotation, and size. Given the right parameters, this might look more random, and organic.";
+For further enhancement, the implementation of a single SVG image for sprinkles could optimize website performance.  Additionally, a randomizer function written in PHP could introduce variety in the number, color, rotation speed, and size of the sprinkles, creating a more organic and dynamic visual effect.";
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [
@@ -66,11 +66,9 @@ $imgArray = [
 echo addContentArea($heading, $description, $imgArray);
 
 // Automating the cupcake promotion
-$heading = "Automating the Cupcake Promotion";
+$heading = "Dynamic Cupcake Promotion Management";
 $description = "<span class=\"mr-1 badge badge-pill badge-secondary\">HTML forms</span><span class=\"mr-1 badge badge-pill badge-secondary\">PHP</span><span class=\"mr-1 badge badge-pill badge-secondary\">SQL queries</span><br>
-Once the user logs in to the admin area and is authenticated, they can set the day of the promotion and whether or not it's active. The action attribute of the form is sent to a PHP procedure page to update the promotion. This page includes functions that execute SQL queries to update the SQLite database. After the functions run, the user/admin is redirected to the same page with a success message(if no errors).
-<br><br>
-When the home page loads, similar functions are called to execute SQL queries. However, instead of UPDATE statements, SELECT statements are used to retrieve the data and save it to variables instead of updating. The PHP date() function is also called inside logic to represent the day of the week as an integer to compare to the day of the promotion in the database."; 
+The admin area allows authorized users to effortlessly manage promotional offers. They can activate or deactivate the cupcake promotion and set the targeted day of the week. Behind the scenes, PHP scripts seamlessly interact with the SQLite database to store and retrieve promotion data."; 
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [
@@ -88,17 +86,12 @@ echo addContentArea($heading, $description, $imgArray);
 
 
 // Building the admin area
-$heading = "Building the Admin Area";
+$heading = "User-Friendly Admin Panel";
 $description = "<span class=\"mr-1 badge badge-pill badge-secondary\">Bootstrap</span><span class=\"mr-1 badge badge-pill badge-secondary\">MAMP</span><span class=\"mr-1 badge badge-pill badge-secondary\">PHP</span><br>
-Before any kind of authorization or authentication, I built the admin area on my local machine. I used the Dashboard example on the Bootstrap website as a starting template. I put the navigation HTML into a PHP file to include on each page and added some active page logic based on a page variable. I added a Dashboard tab to update general sitewide content, a Users tab, Home/Our Story tabs for page specific content, and a Testimonials tab for repeating(post) content.
+Leveraging Bootstrap's components, I constructed an intuitive admin area for website management.  This interface empowers authorized users to effortlessly update content across various sections, including site-wide information, user accounts, testimonials, and individual pages.
 <br><br>
-<span class=\"mr-1 badge badge-pill badge-secondary\">database connection</span><br>
-I then added a PHP file for the connection to the database. Next, I created a database variable and set it to a new PDO Object prepended with the string \"sqlite:\" as per documentation.
-<br><br>
-<span class=\"mr-1 badge badge-pill badge-secondary\">HTML forms</span><span class=\"mr-1 badge badge-pill badge-secondary\">\$_POST</span><span class=\"mr-1 badge badge-pill badge-secondary\">PHP procedure</span><span class=\"mr-1 badge badge-pill badge-secondary\">SQL queries</span><br>
-Next, I added HTML forms to each tab(page) that would update relating content. I set the method attributes to POST and the action attributes to the related procedure files in the procedures directory. Each procedure file included a function to update the database with a SQL query(UPDATE statement). A similar function with a SQL query(SELECT statement) is used to prepopulate the form values and display website content.
-<br><br>
-Since there can be multiple testimonials, I decided on a Testimonials table in the database. Instead of UPDATE statements, I used INSERT INTO statements to add to the database.";
+<span class=\"mr-1 badge badge-pill badge-secondary\">database connection</span><span class=\"mr-1 badge badge-pill badge-secondary\">HTML forms</span><span class=\"mr-1 badge badge-pill badge-secondary\">\$_POST</span><span class=\"mr-1 badge badge-pill badge-secondary\">PHP procedure</span><span class=\"mr-1 badge badge-pill badge-secondary\">SQL queries</span><br>
+Behind the scenes, a secure PHP scripts connect to the SQLite database, facilitating data storage and retrieval.";
 
 
 //It updates a SQLite database with the PHP PDO Object.
@@ -113,14 +106,11 @@ $imgArray = [
 echo addContentArea($heading, $description, $imgArray);
 
 // Adding authentication and authorization
-$heading = "Adding Authentication and Authorization";
-$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">PHP</span><span class=\"mr-1 badge badge-pill badge-secondary\">Authentication</span><span class=\"mr-1 badge badge-pill badge-secondary\">Authorization</span><br>
-During my learning with Treehouse on a PHP track, one of the projects I built was a book rating website. I applied my knowledge from that project to add authentication and authorization to this project. 
+$heading = "Secure User Access Control";
+$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">PHP</span><span class=\"mr-1 badge badge-pill badge-secondary\">Authentication</span><span class=\"mr-1 badge badge-pill badge-secondary\">Authorization</span><span class=\"mr-1 badge badge-pill badge-secondary\">Composer</span><span class=\"mr-1 badge badge-pill badge-secondary\">JWT</span><span class=\"mr-1 badge badge-pill badge-secondary\">cookie</span><br>
+The website implements robust security measures to protect user data and restrict access to administrative features.  JWT (JSON Web Token) technology ensures secure user authentication and authorization.  This approach utilizes industry-standard packages and encryption for added peace of mind.
 <br><br>
-<span class=\"mr-1 badge badge-pill badge-secondary\">Composer</span><span class=\"mr-1 badge badge-pill badge-secondary\">JWT</span><span class=\"mr-1 badge badge-pill badge-secondary\">cookie</span><br>
-To authenticate during the login/registration procedures, a JWT(JSON Web Token) is created with the firebase/php-jwt package. It takes a secret key pulled from the hidden environment file and the encryption algorithm(HS256) as arguments. The JWT is stored in a cookie with the symfony/http-foundation package. These packages are required in the composer.json file, so when you run \"composer update\" in the command line, it will add/update the packages to the vendor folder. 
-<br><br>
-I added the feature of registering as an administrator so after signing up you can sign in and be authenticated. However, since you would not be an admin, you'd get a message to contact the website owner to become an admin. If you tried navigating to another admin page, you'd be redirected to the login page with a notification saying \"Not Authorized\". In order to be an admin you must be promoted by another admin in the Users tab. To avoid an admin with malicious intent from deleting/demoting all admins, a user is defined as the website owner that can not be deleted/demoted."; 
+To streamline administration, the system allows website owners to designate additional administrators.  A designated website owner account cannot be deleted or demoted, safeguarding against accidental or malicious misuse of administrative privileges."; 
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [
@@ -132,23 +122,17 @@ $imgArray = [
 echo addContentArea($heading, $description, $imgArray);
 
 
-
-
-
-
 // Thoughts on an approval process
 $heading = "Thoughts on an Approval Process";
-$description = "A good feature to implement would be an approval process by the website owner. An employee/admin could insert data into the database but the website owner would have to approve it for it to be visible to the public. To accomplish this an \"enabled\" column and a \"user\" column could be added to the Content table in the database. The \"user\" column (foreign key) would link to users id in Users table. This would allow a SQL query to show all added rows by a user that are not enabled. Another PHP function could then be called by the website owner as a result of submitting a form. This function would execute another SQL statement to update the enabled fields allowing it to be public."; 
+$description = "A good feature to implement would be the addition of a content approval workflow.  Such a system would empower website owners to maintain editorial control over user-generated content.  This could involve an \"approval\" stage where content creators submit entries for review by the website owner before they are published live."; 
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [];
 echo addContentArea($heading, $description, $imgArray);
 
 // Final thoughts
-$heading = "Final Thoughts";
-$description = "Building the Sweet Eats Bakery &amp; Caf&eacute; website with the admin area allowed me to use Composer as a PHP package manager for the first time on a personal project. I learned about Symfony session flash bags to store a notification that is automatically removed once retrieved. I was also introduced to storing authenticated user's information, sessions, cookies, &amp; JSON Web Tokens.
-<br><br>
-I'd like to gain a deeper understanding of authentication, authorization, cookie storage, session storage, cross site scripting, and cross site request forgery."; 
+$heading = "Key Learnings and Areas for Growth";
+$description = "Developing the Sweet Eats Bakery & Café website significantly expanded my technical skillset.  I gained practical experience with Composer for efficient package management, explored the use of Symfony session flash messages, and implemented secure user authentication with JSON Web Tokens (JWTs).<br><br>This project has also sparked my interest in further delving into critical security concepts like cross-site scripting (XSS) and cross-site request forgery (CSRF).  A strong understanding of these areas is paramount for building secure and robust web applications."; 
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [];

@@ -14,8 +14,8 @@ include 'inc/entrydetails.php';
 $featuredImage = "img/optberry_featured-min.jpg";
 $title = "Optberry Product Customization Application";
 $highlights = "SQLite, PDO Object, PHP populating JavaScript Objects, click tracking";
-$details = "This application was an opportunity for me to deep dive into the programming concepts that I've been learning. One of my hobbies is playing guitar so I created Revomere Guitars, a fictional guitar brand to populate the database. While there is currently no user interface/admin area for CRUD operations, the SQLite database is connected and fully operational.";
-$visitLink = "https://www.optberry.nibtrek.com/";
+$details = "This app lets users design their dream product, from guitars(Revomere as showcased) to sneakers. Update the database, and the app adapts seamlessly.  I built it to showcase my skills in web development, database integration, and graphic design.";
+$visitLink = "https://www.optberry.whatdavedoes.com/";
 $codeLink = "https://github.com/whatdavedoes/optberry";
 
 echo addEntryDetails($featuredImage, $title, $highlights, $details, $visitLink, $codeLink);
@@ -24,8 +24,8 @@ echo addBigTxt("The Process:");
 
 
 // Front End Data Structure
-$heading = "Front End Data Structure";
-$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">JavaScript</span><span class=\"mr-1 badge badge-pill badge-secondary\">data structure</span><span class=\"mr-1 badge badge-pill badge-secondary\">click tracking</span><br>I began by thinking of a JavaScript data structure. I represented the product, in this case a guitar as a Javascript Object. Inside this object I added a categories array containing a list of Category Objects. The Product contained Categories. I then repeated this pattern to have Groups in Categories and to have Options in Groups. For example, the Product is the guitar, a Category of the guitar is hardware, a Group of hardware is pickups, and an Option of pickups is chrome. I decided to add Group as a sorting layer between Category and Option to have an additional layer of click tracking and to keep the navigation bar clean by hiding Groups of an unselected Category. I used Bootstrap's collapse component with the accordion example as a template for the vertical navbar. To create all these JavaScript Objects I made Classes including a Click class. I also added a clicks array in the Category, Group, and Option Objects to track clicks."; 
+$heading = "Hierarchical Data Structure for Customization";
+$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">JavaScript</span><span class=\"mr-1 badge badge-pill badge-secondary\">data structure</span><span class=\"mr-1 badge badge-pill badge-secondary\">click tracking</span><br>To represent customizable products, I designed a hierarchical JavaScript object structure.  This structure starts with a Product object, which contains an array of Category objects. Each Category can further contain Group objects for finer organization. Finally, Group objects hold individual customization Option objects. This structure, with the addition of a Group layer, provides an extra level of organization and navigation control.  Unselected category groups are hidden, improving user experience and keeping the navigation bar clean.  I leveraged Bootstrap's collapse component for a user-friendly accordion-style navigation."; 
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [
@@ -43,7 +43,7 @@ echo addContentArea($heading, $description, $imgArray);
 
 // Backend Database Schema 
 $heading = "Backend Database Schema";
-$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">SQLite</span><span class=\"mr-1 badge badge-pill badge-secondary\">PHP</span><span class=\"mr-1 badge badge-pill badge-secondary\">PDO Object</span><br>To populate the JavaScript Objects described above, I decided to use SQLite as a database. The Options table is shown below. There are three foreign key columns/attributes. One links to the group table, one to the table with styling data for the images, and one to a \"select\" group if the option is contained within a select HTML input. I made queries to the database using a PHP PDO Object, and dynamically created(with PHP) Javascript Objects with the JavaScript constructor methods from the Javascript Classes. I used the software DB Browser for SQLite to design the database schema.";
+$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">SQLite</span><span class=\"mr-1 badge badge-pill badge-secondary\">PHP</span><span class=\"mr-1 badge badge-pill badge-secondary\">PDO Object</span><br>To store product customization options, I implemented a schema using SQLite.  This lightweight database efficiently manages the data powering the application.  The core table, Options, utilizes foreign keys to link related data.<br><br>This relational structure allows for efficient data retrieval and manipulation.  Leveraging PHP PDO, I crafted queries to fetch data dynamically.  These results were then used to construct JavaScript objects, replicating the hierarchical structure on the front-end.";
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [
@@ -55,7 +55,7 @@ echo addContentArea($heading, $description, $imgArray);
 
 // Data Structure Code Snippet
 $heading = "Data Structure Code Snippet";
-$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">Chrome DevTools</span><br>This is a code snippet from Chrome DevTools inside the Product Object. The \"displayTitle\" property has a value of Camila which is one of the guitar models/shapes. We are in the Group of Model under the Shape Category. We can only have one model at a time, so \"oneSelection\" is set to true. The Camila option has been clicked three times as you can see from the clicks array. The last Click Object in the clicks array does not have an end value. This is because it is a current selection.";
+$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">Chrome DevTools</span><br>This code snippet, captured from Chrome DevTools, offers a glimpse into the product object in action and how it reflects user customization choices.  Here, we see the \"Camila\" model/shape selected, nestled within the \"Model\" group of the \"Shape\" category. The \"oneSelection\" property ensures only one model can be chosen at a time, enforcing a single selection for this category.  The \"clicks\" array provides valuable insight into user interaction.  It reveals \"Camila\" has been selected three times, with the most recent selection indicated by a Click object lacking an \"end\" value.  This demonstrates how the application accurately tracks user choices within the pre-defined product structure, ensuring a seamless customization experience.";
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [
@@ -67,7 +67,7 @@ echo addContentArea($heading, $description, $imgArray);
 
 // Front End Development
 $heading = "Front End Development";
-$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">CSS positioning</span><span class=\"mr-1 badge badge-pill badge-secondary\">PNG files</span><span class=\"mr-1 badge badge-pill badge-secondary\">responsive design</span><br>The product/guitar image is a collection of PNG images overlaid on top of one another. The images shown relate to the options selected. A challenge that I encountered was maintaining aspect ratios and position while resizing(page width) the product. I solved this with a div container with a specified pixel width(1445px). I then wrapped the images in another container div inside the first with the CSS position property set to relative. I then set the CSS position value of the images to absolute and set the width to a percentage value so they scale with their container. I calculated the width of the images with the formula (image width in pixels * 100 / 1445). Given that the images were positioned absolute, I used the top and left CSS properties with percentage values(similar calculation) to position the images. I made sure the percentage values would never compute to higher than the image width in pixels to avoid pixelation of the raster graphic.";
+$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">CSS positioning</span><span class=\"mr-1 badge badge-pill badge-secondary\">PNG files</span><span class=\"mr-1 badge badge-pill badge-secondary\">responsive design</span><br>A key aspect was creating a dynamic product image that reflects user choices. This involved layering PNG images for different customization options. The challenge was maintaining image fidelity (aspect ratio and detail) during page resizes.<br><br>I implemented a container-based approach using nested divs. The inner container with relative positioning acts as a reference for individual images. Each image utilizes absolute positioning with a width set as a percentage of the container width ((image width in pixels * 100) / 1445px).  Similar percentage calculations ensure precise positioning of each image layer. Safeguards prevent these values from exceeding the original image width to maintain image quality.";
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [
@@ -79,8 +79,8 @@ echo addContentArea($heading, $description, $imgArray);
 
 
 // Implementing Features
-$heading = "Implementing Features";
-$description = "<ul><li>options that are dependent on other options</li><li>required or optional options</li><li>one selection or multiple selections per group</li><li>options that are required first/priority(aesthetic reasons)<li>multiple selection group with optional select box</li><li>default options</li><li>progress bar</li><li>added price for option selection</li><li>click tracking bar chart</li><br><p class=\"txtProcessWidth\">Some of these features were unseen during the planning stage of the application. This led to added table attributes in the SQLite database, additional queries outside the JavaScript data structure, adding more properties to classes, and inconsistent yet functional code. This is a good opportunity to refactor.</p>";
+$heading = "Feature Implementation and the Power of Refactoring";
+$description = "<ul><li><b>Conditional Options</b>: The ability to link options together, where some selections influence the availability of others.</li><li><b>Required vs. Optional Choices</b>: Providing a clear distinction between mandatory and non-essential options for a streamlined experience.</li><li><b>Selection Limits</b>: Enforcing single or multiple selections within option groups, guiding users towards valid configurations.</li><li><b>Prioritized Options</b>: Introducing the concept of \"priority\" options to ensure a visually pleasing starting point for customization.<li><b>Selectable Option Groups</b>: Offering the option to use a select box for multi-selection groups, catering to user preferences.</li><li><b>Default Selection</b>: Setting default options to provide a starting point and reduce user input.</li><li><b>Progress Tracking</b>: Implementing a progress bar to visualize customization completion and encourage users.</li><li><b>Price Tracking</b>: Updating the price dynamically as users select options, enabling informed decision-making.</li><li><b>Click Tracking</b>: Visualizing user interactions with a click tracking bar chart</li><br><p class=\"txtProcessWidth\">While these features enrich the application, their improvised implementation during development resulted in database inconsistencies, unstructured queries, and code clutter. These challenges highlight the importance of planning and refactoring.</p>";
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [
@@ -94,7 +94,7 @@ echo addContentArea($heading, $description, $imgArray);
 
 // Dependencies Function
 $heading = "A Code Snippet of a Function";
-$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">JavaScript</span><br>This JavaScript function has nested for statements to loop through all product options and return an array of dependent options. The listInnerDependancies() function also adds dependencies of dependencies to the array allowing for two layers of dependancies. The concatenated string that is added to the array will be used to notify the user in a modal. They will be made aware of the dependent options being unselected if they continue.";
+$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">JavaScript</span><br>This JavaScript function, listInnerDependancies(), plays a crucial role in managing dependent options within the product customization process.  It utilizes nested loops to iterate through all product options and identify any dependencies.  ";
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [
@@ -106,19 +106,19 @@ echo addContentArea($heading, $description, $imgArray);
 
 // Logo and Guitar Body Design
 $heading = "Logo &amp; Guitar Body Design";
-$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">Affinity Designer</span><br>Being a guitar player, it is on my bucket list to have a luthier make one of my guitar designs for me."; 
+$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">Affinity Designer</span>"; 
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [
     ['img/opt_logo-min.jpg', 'initial sketches', 6],
-    ['img/opt_logo_vector-min.jpg', 'end result', 6],
-    ['img/g_cutouts-min.jpg', 'guitar cutouts', 4]
+    ['img/opt_logo_vector-min.jpg', 'end result', 6]
+    // ['img/g_cutouts-min.jpg', 'guitar cutouts', 4]
 ];
 echo addContentArea($heading, $description, $imgArray);
 
 // Image File Considerations
 $heading = "Image File Considerations";
-$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">Chrome DevTools</span><span class=\"mr-1 badge badge-pill badge-secondary\">online image compression</span><span class=\"mr-1 badge badge-pill badge-secondary\">HTTP requests</span><br>The image below shows all of the HTTP requests for the images(green bars) which took about 4 seconds to load even with optimized images. A more complex product with more options would make more requests and take longer to load(same internet speed, no cache, etc...). A way around this might be combining images, loading the images as needed with AJAX, and/or converting images to base64 data URIs. This is an improvement that can be made.";
+$description = "<span class=\"mr-1 badge badge-pill badge-secondary\">Chrome DevTools</span><span class=\"mr-1 badge badge-pill badge-secondary\">online image compression</span><span class=\"mr-1 badge badge-pill badge-secondary\">HTTP requests</span><br>While the application allows for extensive product customization, the initial load time was impacted by the number of image requests.  Even with optimized images, the page took approximately 4 seconds to load on an average internet connection with no cache (see image below). This highlights the importance of image optimization for a smooth user experience.<br><br>To address this challenge and ensure a faster experience for users, future iterations of the application could explore image combining, lazy loading, or data URIs.<br><br>By strategically implementing these optimization techniques, the application can deliver a significantly faster and more responsive experience for users, even as the range of customization options expands.";
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [
@@ -136,7 +136,7 @@ echo addContentArea($heading, $description, $imgArray);
 
 // 
 $heading = "Final Thoughts";
-$description = "I used GitHub for version control for the first time with this application. I could have put more emphasis on developing more efficiently, separating concerns, and seeing the big picture. I noticed a trend of implementing a feature quickly with minimal development time and lack of notes. This created a mess and slowed the development time of additional features. Concepts such as DRY(Don't Repeat Yourself) and refactoring come to mind when thinking how to improve this application and myself as a programmer. There is a lot of code bloat, unnecessary loops, and SQL Queries. I learned a lot and gained experience from developing this product customization application. Along with my usual studies, a priority of mine is strengthening my skills with SQL, structuring code, and using GitHub for versioning.";
+$description = "This project was my first experience using GitHub for version control. While prioritizing quick feature implementation kept the project moving, it also revealed areas for improvement in Separation of Concerns, Planning and Scalability, and Code Optimization.<br><br>These learnings emphasize the importance of structured code, clear documentation, and taking the time to plan for future growth. This application served as a valuable learning experience, and I'm actively working on strengthening my skills in SQL Optimization, and Code Structure.<br><br>By continuously seeking improvement and expanding my skill set, I aim to become a more efficient and well-rounded developer in future projects.";
 // an array containing arrays of image details
 // [IMAGE SRC ATTRIBUTE, IMAGE CAPTION, COLUMN WIDTH(ROW WIDTH = 12)]
 $imgArray = [

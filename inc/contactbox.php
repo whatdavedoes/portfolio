@@ -18,7 +18,7 @@
     
 </div>-->
 
-    <a href="tel:585-754-0580"><img class="contactIco phoneIco" src="img/phone-min.png"><span><?php echo $phone; ?></span></a>
+    <a href="tel:585-622-6492"><img class="contactIco phoneIco" src="img/phone-min.png"><span><?php echo $phone; ?></span></a>
 
     <br>
 
