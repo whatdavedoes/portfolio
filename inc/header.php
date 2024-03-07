@@ -27,7 +27,7 @@ include 'functions.php';
     <meta name="twitter:image" content="https://www.whatdavedoes.com/img/opengraph-min.jpg">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="Dave Pierce | Dave Pierce | Web Developer and Audio Engineer Portfolio" />
+    <meta property="og:title" content="Dave Pierce | Dave Pierce | Web Developer and Designer Portfolio" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.whatdavedoes.com/" />
     <meta property="og:image:width" content="1275" />
@@ -64,11 +64,11 @@ include 'functions.php';
       <nav>
           <a class="nav-name big-txt" href="index.php"><?php echo $name; ?></a>
           <ul class="nav-list">
-          <li class="sm-txt <? if ($page == 'portfolio' || in_array($page, $entryPageVars)){echo 'active';} ?>">
-            <a class="" href="index.php">Portfolio <? if ($page == 'portfolio'){echo '<span class="sr-only">(current)</span>';} ?></a>
+          <li class="sm-txt <?php if ($page == 'portfolio' || in_array($page, $entryPageVars)){echo 'active';} ?>">
+            <a class="" href="index.php">Portfolio <?php if ($page == 'portfolio'){echo '<span class="sr-only">(current)</span>';} ?></a>
           </li>
-          <li class="sm-txt <? if ($page == 'about'){echo 'active';} ?>">
-            <a class="" href="about.php">About <? if ($page == 'about'){echo '<span class="sr-only">(current)</span>';} ?></a>
+          <li class="sm-txt <?php if ($page == 'about'){echo 'active';} ?>">
+            <a class="" href="about.php">About <?php if ($page == 'about'){echo '<span class="sr-only">(current)</span>';} ?></a>
           </li>
         </ul>
       </nav>

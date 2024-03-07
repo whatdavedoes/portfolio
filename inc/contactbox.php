@@ -32,7 +32,7 @@
 <nav>
     <ul class="nav-box mt-4">
           <li class="">
-            <a class="boxLnk" href="index.php">My Portfolio <? if ($page == 'portfolio'){echo '<span class="sr-only">(current)</span>';} ?></a>
+            <a class="boxLnk" href="index.php">My Portfolio <?php if ($page == 'portfolio'){echo '<span class="sr-only">(current)</span>';} ?></a>
           </li>
           <li class="boxLnk">
             <?php if($page != "about"){ echo '<a class="" href="about.php">About Me</a>'; } ?>
