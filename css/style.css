@@ -340,3 +340,7 @@ nav ul li a:hover {
     margin: 0;
   }
 }
+
+.nib-link {
+    text-decoration: underline;
+}

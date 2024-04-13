@@ -8,7 +8,7 @@ include 'functions.php';
   <head>
       
     <!-- NibTrek 32 x 32 icon -->    
-    <link rel="icon" type="image/png" href="/img/logo-ico-min.png">
+    <link rel="icon" type="image/png" href="/img/nibtrek.png">
       
     <!-- Required meta tags -->
     <meta charset="utf-8">

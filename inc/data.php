@@ -10,6 +10,7 @@ $email = "davepweb@gmail.com";
 
 // Portfolio entry images exported as PNG at 800 x 750px. Exported with a bounding box.
 $entries = [
+    ['nibtrek', 'nibtrek.png', ['html', 'css', 'js', 'bootstrap', 'php', 'sql']],
     ['sweeteats', 'sweet-min.png', ['html', 'css', 'js', 'bootstrap', 'php', 'sql']],
     ['elevate', 'elevate-min.png', ['affinity']],
     ['optberry', 'optberry-min.png', ['html', 'css', 'js', 'bootstrap', 'php', 'sql']],
@@ -35,5 +36,4 @@ $socials = [
     ['LinkedIn', 'https://www.linkedin.com/in/nibtrekdave/', '../img/linkedin-min.png'],
     ['GitHub', 'https://github.com/whatdavedoes', '../img/github-min.png'],
     ['Facebook', 'https://www.facebook.com/webdesignerdave', '../img/facebook-min.png']
-    
 ];

@@ -16,7 +16,7 @@ include 'inc/header.php'; ?>
 
     <div class="col-md-12">
 
-        <p class="txtWidth cntrBlock mt-4">I bring a diverse skill set to the table, including <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, <span class="highlight">JavaScript</span>, <span class="highlight">PHP</span>, and <span class="highlight">graphic design</span>.  I'm currently fueling my passion for development by building OptBox, a personal project that allows me to experiment and solidify my skills.  I'm eager to join a collaborative team where I can continuously learn and grow alongside talented individuals.</span></p> 
+        <p class="txtWidth cntrBlock mt-4">I bring a diverse skill set to the table, including <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, <span class="highlight">JavaScript</span>, <span class="highlight">PHP</span>, and <span class="highlight">graphic design</span>. <a class="nib-link" href="../nibtrek.php">NibTrek</a> is my current project, where I fuel my passion for development and start ups by building commercially viable web applications and fostering partnerships. I'm eager to join a collaborative team where I can continuously learn and grow alongside talented individuals.</span></p> 
 
         <img class="cntrBlock likesWidth mt-2 mb-2" src="img/dave_likes-min.png">
 
